@@ -1,0 +1,23 @@
+services:
+   postgres:
+      image: postgres:16-alpine
+      container_name: ndis-postgres
+      restart: unless-stopped
+      environment:
+         POSTGRES_USER: ndis
+         POSTGRES_PASSWORD: ndis_password
+         POSTGRES_DB: ndis_invoice
+      ports:
+         - '5432:5432'
+      volumes:
+         - postgres_data:/var/lib/postgresql/data
+         - ./src/db/migrations/001_schema.sql:/docker-entrypoint-initdb.d/01_schema.sql
+         - ./src/db/migrations/002_seed.sql:/docker-entrypoint-initdb.d/02_seed.sql
+      healthcheck:
+         test: ['CMD-SHELL', 'pg_isready -U ndis -d ndis_invoice']
+         interval: 5s
+         timeout: 5s
+         retries: 10
+
+volumes:
+   postgres_data:
