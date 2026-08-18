@@ -1,6 +1,6 @@
 # NDIS Invoice Management System
 
-A participant invoicing platform built for the Witty Data assessment — covering participant/provider management, NDIS rate-set Excel import, and invoice management with rate/price matching.
+A participant invoicing platform covering participant/provider management, NDIS rate-set Excel import, and invoice management with rate/price matching.
 
 ## Tech Stack
 
