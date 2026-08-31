@@ -2,6 +2,8 @@
 
 A participant invoicing platform covering participant/provider management, NDIS rate-set Excel import, and invoice management with rate/price matching.
 
+**Live demo:** [https://ndis-invoice-flax.vercel.app/](https://ndis-invoice-flax.vercel.app/)
+
 ## Tech Stack
 
 - Node.js v24.18.0, Next.js v16.2.10, TypeScript
