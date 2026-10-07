@@ -1,4 +1,4 @@
-import type { Provider } from '@/db/types';
+import type { Provider } from '@/types';
 import { swrMutation } from '@/lib/swr-client';
 import { Button, Flex, Popconfirm, message } from 'antd';
 import useSWRMutation from 'swr/mutation';
